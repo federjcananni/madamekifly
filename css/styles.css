@@ -81,6 +81,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: rgb(255, 255, 255);
+
 } /*trovato*/
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -5745,7 +5746,7 @@ a.close.disabled {
 }
 .modal-open .modal {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .modal {
@@ -10430,10 +10431,10 @@ p {
 }
 
 .page-section {
-  padding: 4.5rem 0;
+  padding: 6rem 0;
 }
 .forsize {
-  padding: 4.5rem 0 !important;
+  padding: 6rem 0 !important;
 }
 
 .page-section h2.section-heading {
@@ -10586,8 +10587,8 @@ img::-moz-selection {
   }
 }
 header.masthead  {
-  padding-top: 15.5rem;
-  padding-bottom: 25rem;
+  padding-top: 16.5rem;
+  padding-bottom: 14rem;
   text-align: center;
   color: #fff;
   background-image: url("../assets/img/Untitled-1.jpg");
@@ -11860,4 +11861,9 @@ overflow-x:hidden;
 .color {
   color: #000;
   text-align: center justify;
+}
+
+.righe {
+  text-align: center !important;
+  padding-top: 1rem;
 }
