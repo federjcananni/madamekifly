@@ -61,12 +61,10 @@
                 <div id="stars3"></div>
                 </div>
             </section>
-          <div class="container">
-                    <div data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="300"
-                    data-aos-duration="2000"
-                    data-aos-offset="0" class="masthead-subheading">Benvenuti</div>
+          <div class="container" data-aos="fade-zoom-in" >
+                    <div 
+                    
+                   class="masthead-subheading">Benvenuti</div>
                     <h1 div class="masthead-heading text-uppercase">Energia e risposte a tua portata</h1>
                     <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#Servizi">Scopri di più</a>
             </div>
@@ -76,16 +74,16 @@
 
         <!-- Servizi Grid-->
         <section class="page-section bg-light" id="Servizi">
-            <div data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-delay="300"
-            data-aos-duration="5000" data-aos-once="false" class="container">
+            <div 
+             class="container">
                 <div class="text-center">
                     <h2 data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-center" data-aos-duration="200" data-aos-once="false" class="section-heading text-uppercase">Servizi</h2>
+                    data-aos-anchor-placement="bottom-center"  data-aos-delay="10" data-aos-once="false" class="section-heading text-uppercase">Servizi</h2>
                     <h3 class="section-subheading text-muted"> </h3>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic" data-aos-delay="60"
+             data-aos-once="false">
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
@@ -182,7 +180,7 @@
             <div class="container fonti">
                 <div class="text-center">
                     <h2 data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-center" data-aos-duration="200" data-aos-once="false"  class="section-heading text-uppercase"> Recensioni</h2>
+                    data-aos-anchor-placement="bottom-center"  data-aos-once="false"  class="section-heading text-uppercase"> Recensioni</h2>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
               
@@ -255,7 +253,6 @@
 
                     </div>
                   </div>
-                  <p></p
                   <p></p>
                   <p></p>
                   <p></p>
@@ -270,6 +267,8 @@
                   <p></p>
                   <p></p>
                   <p></p>
+                  <p></p>
+                  <div class="righe"> <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger " href="https://www.facebook.com/madamekifly/reviews">Leggi di più</a></div>
                   </div>
 
                  
@@ -288,7 +287,7 @@
                 <form id="contactForm" name="sentMessage"> 
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
-                            <div class="form-group">
+                            <div class="form-group" data-aos="fade-right"  data-aos-once="false"  data-aos-delay="00">
                                 <select required name="Servizi" id="service" class="form-control  servizis mb-md-0">
                                     <option value="" selected disabled hidden> Scegli un Servizio* </option>
                                     <option value="Reiki">Reiki </option>
@@ -300,16 +299,16 @@
                                     <option value="Info"> Informazioni </option> 
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" data-aos="fade-right"  data-aos-once="false"  data-aos-delay="10">
                                 <input class="form-control" id="email" type="email" placeholder="La tua Email*" required="required" data-validation-required-message="Please enter your email address." />
                                 
                             </div>
-                            <div class="form-group mb-md-0">
+                            <div class="form-group mb-md-0" data-aos="fade-right"  data-aos-once="false"  data-aos-delay="10">
                                 <input class="form-control" id="name" type="text" placeholder="Il tuo Nome*" required="required" data-validation-required-message="Please enter your phone number." />
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
+                            <div class="form-group form-group-textarea mb-md-0" data-aos="fade-left"  data-aos-once="false"  data-aos-delay="03">
                                 <textarea class="form-control" id="message" placeholder="Il tuo Messaggio*" required="required" data-validation-required-message="Please enter a message."></textarea>
                                 
                             </div>
@@ -731,6 +730,15 @@
                once:false});
           </script>
                   <script src="js/scripts.js"></script>
+
+                  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+                  <script>
+                 
+                  $(function() {
+                    $( "header" ).text(  );
+                  });
+                 
+                  </script>
 
     </body>
 </html>
