@@ -29,6 +29,10 @@
             }
         }
     });
+          $(window).on('unload', function() {
+        $(window).scrollTop(0);
+     });
+
       //Prevents "pull to reload" behaviour in Chrome. Assign to child scrollable elements.
 angular.module('hereApp.directive').directive('noPullToReload', function() {
     'use strict';
