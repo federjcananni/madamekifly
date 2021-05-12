@@ -10500,6 +10500,7 @@ img::-moz-selection {
 .btn-social:hover {
   color: #d85f16;
   border-color: #fd7e14;
+  background-color: #d85f16;
 }
 #mainNav {
   padding-top: 1rem;
