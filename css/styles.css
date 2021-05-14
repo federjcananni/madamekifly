@@ -2878,10 +2878,7 @@ fieldset:disabled a.btn {
   background-color: #dab202;
   border-color: #fcf8008a;
 }
-.btn-dark:hover {
-  color: #fff;
-  border-color: #1d2124;
-}
+
 .btn-dark:focus,
 .btn-dark.focus {
   color: #fff;
@@ -10499,7 +10496,6 @@ img::-moz-selection {
 .btn-social:hover {
   color: #d85f16;
   border-color: #fd7e14;
-  background-color: #d85f16;
 }
 #mainNav {
   padding-top: 1rem;
