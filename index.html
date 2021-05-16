@@ -1,7 +1,805 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="it">
+    <head>
+        <script> window.addEventListener('load', function(e) {
+    window.dispatchEvent(new Event('resize'));});
+
+window.addEventListener('resize', function(e) {
+document.documentElement.style.setProperty('--vw', (window.innerWidth * 0.01) + 'px');
+document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+
+});
+function sendEmail(event, lang) {
+
+    event.preventDefault();
+showSnackbar('E-mail inviata con successo');
+}
+            /-- Snackbar --/
+
+var snack = null;
+var snackTimeout = null;
+
+function showSnackbar(message, time = 3000) {
+
+    if (snack == null) {
+
+        createSnackbar();
+
+    }
+
+    clearTimeout(snackTimeout);
+
+    snack.innerHTML = message;
+
+    snack.classList.remove('hide');
+    snack.classList.add('show');
+
+    snackTimeout = setTimeout(closeSnackbar, time);
+
+}
+
+function closeSnackbar() {
+
+    if (snack != null) {
+
+        snack.classList.remove('show');
+        snack.classList.add('hide');
+
+    }
+
+}
+
+function createSnackbar() {
+
+    snack = document.createElement('div');
+
+    snack.id = 'snackbar';
+    snack.innerHTML = 'Empty';
+
+    document.body.appendChild(snack);
+
+}
+        </script> 
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <title>Madame Kifly</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/about/35_85268.ico">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+<!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSRS8CHHFF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VSRS8CHHFF');
+    </script>
+
+
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/Untitled-6.png" alt="" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#page-top">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Servizi">Servizi</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#recensioni">Recensioni </a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contattami </a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"> About </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead" style= "height:calc(var(--vh, 1vh) * 100); display: flex; flex-direction: column">
+            <section class="wrapper" style="position: absolute">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div style="display:none" id="stars3"></div>
+                </div>
+            </section>
+          <div class="container" data-aos="fade-zoom-in" style=" margin: auto;" >
+                    <div 
+                    
+                   class="masthead-subheading">Benvenuti</div>
+                    <h1 div class="masthead-heading text-uppercase">Energia e risposte a tua portata</h1>
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#Servizi">Scopri di più</a>
+            </div>
+          
+        </header>
+       
+
+        <!-- Servizi Grid-->
+        <section class="page-section bg-light" id="Servizi">
+            <div class="container">
+                <div class="text-center">
+                    <h2 data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-center"  data-aos-once="false" class="section-heading text-uppercase">Servizi</h2>
+                    <h3 class="section-subheading text-muted"> </h3>
+                </div>
+                <div class="row">
+                    <div data-aos="flip-right"
+             data-aos-once="false" class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid rito" src="assets/img/IMG_9294.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Reiki</div>
+                                <div class="portfolio-caption-subheading text-muted hey"> Energia Terapeutica</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-right"
+             data-aos-once="false" class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content hey"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid rito" src="assets/img/IMG_9360.jpg" alt="" />
+
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Stimolazione Neurale</div>
+                                <div class="portfolio-caption-subheading text-muted hey">Energia Terapeutica </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-right"
+             data-aos-once="false" class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid rito" src="assets/img/IMG_9356.jpg" alt="Segnature" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Segnature</div>
+                                <div class="portfolio-caption-subheading text-muted hey">Rito di guarigione</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-right"
+             data-aos-once="false" class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid rito" src="assets/img/rifare.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Lettura sibille</div>
+                                <div class="portfolio-caption-subheading text-muted hey">Divinazione </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-right"
+             data-aos-once="false"class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid rito" src="assets/img/darifare.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Lettura tarocchi</div>
+                                <div class="portfolio-caption-subheading text-muted hey"> Divinazione </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-right"
+             data-aos-once="false" class="col-lg-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid rito" src="assets/img/photo5764969249931114057.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Ching</div>
+                                <div class="portfolio-caption-subheading text-muted hey"> Consigli divinatori </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recensioni-->
+        
+
+        <section class="page-section forsize" id="recensioni">
+            <div class="container fonti">
+                <div class="text-center">
+                    <h2 data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-center"  data-aos-once="false"  class="section-heading text-uppercase"> Recensioni</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+              
+                <div data-aos="zoom-in-up" data-aos-once="false" class="wrapper">
+                    <div class="box box2">
+                        <i class="fas fa-quote-left quote"></i>
+                        <p> Ringrazio m. Kifly per le sue previsioni molto precise e azzeccate. E' molto sintetica nelle sue previsioni, ma ci becca proprio, anche a distanza di tempo! Mi ha aiutato molto</p> <p> Quando devo prendere decisioni importanti la tengo sempre in considerazione. </p> 
+  
+                        </p>
+                        <div class="content">
+                          <div class="info">
+                            <div class="name">Marina Gulfini</div>
+                            <div class="job"></div>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="image">
+                            <img src="assets/img/woen-2_icon-icons.com_55032.png" alt=""> 
+                          </div>
+                        </div>
+                      </div>
+                    <div class="box">
+                      <i class="fas fa-quote-left quote"></i>
+                      <p> Ho una bimba di tre anni che ha preso il fuoco di s. antonio, gli antivirali non funzionavano. Dopo notti insonni mi sono rivolta a Madame kifly e con mio stupore al terzo giorno di trattamento il fuoco di s. antonio era scomparso. Ero scettica verso queste tecniche ma mi sono dovuta ricredere grazie
+                      </p>
+                      <p></p>
+                      <p></p>
+                      <div class="content">
+                        <div class="info">
+                          <div class="name">Paola C.</div>
+                          <div class="job"></div>
+                          <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+
+                        </div>
+                        <div class="image">
+                           <img src="assets/img/iconfinder-4-avatar-2754580_120522.png" alt=""> 
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="box">
+                      <i class="fas fa-quote-left  quote"></i>
+                      <p> Soffro da anni di dolori alla schiena che mi rendono difficile compiere certe attività. Mi sono fatta visitare da diversi medici e ho fatto molti esami ma nessuno è stato in grado di aiutarmi. Per questo motivo ho deciso di chiedere a Madame e devo dire che lei solo attraverso una foto riesce a darmi sollievo al dolore. Quando mi tratta ho come la sensazione che qualcuno mi stia mettendo dei sostegni sulla schiena</p><p>E' veramente incredibile</p>
+                      <div class="content">
+                        <div class="info">
+                          <div class="name">Carmela Leonardi </div>
+                          <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        </div>
+                        <div class="image">
+                          <img src="assets/img/iconfinder-11-avatar-2754576_120520.png" alt=""> 
+                        </div>
+                    </div>
+
+                    </div>
+                  </div>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <div class="righe"> <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger " href="https://www.facebook.com/madamekifly/reviews">Leggi di più</a></div>
+                  </div>
+
+                 
+        </section>
+
+
+        
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                    <div class="text-center">
+                        <h2 data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-center" data-aos-once="false"  class="section-heading text-uppercase">Contattami</h2>
+                        <h3 class="section-subheading text-muted"></h3>
+                    </div>
+                <form id="contactForm" name="sentMessage" onsubmit="sendEmail(event, 'en');" > 
+                            <div class="row align-items-stretch mb-5">
+                                    <div class="col-md-6">
+                                        <div class="form-group" data-aos="fade-right"  data-aos-once="false">
+                                            <select required name="Servizi" id="service" class="form-control  servizis mb-md-0">
+                                                <option value="" selected disabled hidden> Scegli un Servizio* </option>
+                                                <option value="Reiki">Reiki </option>
+                                                <option value="Stimolazione Neurale">Stimolazione Neurale </option>
+                                                <option value="Lettura"> Segnature</option>
+                                                <option value="Lettura ">Lettura Sibille</option>
+                                                <option value="Lettura"> Lettura Tarocchi</option>
+                                                <option value="Lettura"> Ching</option>
+                                                <option value="Info"> Informazioni </option> 
+                                            </select>
+                                        </div>
+                                        <div class="form-group" data-aos="fade-right"  data-aos-once="false">
+                                            <input class="form-control" id="email" type="email" placeholder="La tua Email*" required="required" data-validation-required-message="Please enter your email address." />
+                                              
+                                        </div>
+                                        <div class="form-group mb-md-0" data-aos="fade-right"  data-aos-once="false" >
+                                            <input class="form-control" id="name" type="text" placeholder="Il tuo Nome*" required="required" data-validation-required-message="Please enter your phone number." />
+                                        </div>
+                                    </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-group-textarea mb-md-0" data-aos="fade-left"  data-aos-once="false">
+                                        <textarea class="form-control" id="message" placeholder="Il tuo Messaggio*" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit"  link rel="icon" type="image/x-icon"> Invia
+                        
+                            <img class= "invia" src="assets/img/send.jpg" alt="Invia">
+
+
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        
+        <!-- About-->
+
+
+        <section class="page-section" id="about">
+  
+    
+            <div class="container">
+                <div class="text-center">
+                    <h2 data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-center"  data-aos-once="false"  class="section-heading text-uppercase">About</h2>
+                    <h3 class="section-subheading text-muted hey">Madame Kifly</h3>
+                </div>
+                <ul class="timeline">
+                    
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid fara" src="assets/img/e1d27e130135698b96127f260aed0082.png" alt="6°chackra" /></div>
+                     <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading"></h4>
+                            </div>
+                            <div class="timeline-body"><p data-aos="fade-up-right"  data-aos-once="false" 
+                                class= "text-muted erco"> Mi sono avvicinata a questo mondo così particolare per puro caso per la verità; ormai già prossima al mezzo secolo non avrei mai pensato di ritrovarmi ad un certo punto a domandarmi: "Chi sei? Qual è il senso della mia vita?" Beh, io di sicuro non lo sapevo. </p> </li>
+
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid fara2" src="assets/img/cards_magic_icon_151722.ico" alt="Carte" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4></h4>
+                                <h4 class="subheading"></h4>
+                            </div>
+                            <div class="timeline-body"><p data-aos="fade-up-left" ata-aos-once="false"  class="text-muted erco"> E' cominciata così la mia avventura alla scoperta di me stessa e allo studio delle diverse tecniche energetiche ed esoteriche (conseguimento del terzo livello di reiki e stimolazione neurale). 
+                                </p></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid fara1" src="assets/img/Empatia-la-pratica-nel-quotidiano.png" alt="Empatia" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4></h4>
+                                <h4 class="subheading"></h4>
+                            </div>
+                            <div>  
+                            <br class="timeline-body"><p data-aos="fade-up-right"  data-aos-once="false"  class="text-muted erco"> Più scoprivo me e quello che mi stava attorno e più mi interessavano le problematiche e le domande che si ponevano gli altri, cercavo di sentire, percepire e ascoltare. </p> <p data-aos="fade-up-right"  data-aos-once="false"  class="text-muted">Questo mi ha portato a riscoprire una forte predisposizione all'ascolto degli altri.  Per la verità mi piacerebbe anche a volte essere ascolta, ma aimè devo essere noiosa perchè non ho mai trovato un grande pubblico. </p>
+                        </div>
+                    </li>
+
+                    
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4 data-aos="fade-up-left" ata-aos-once="false">
+                                Così 
+                                <br/>
+                                eccomi qua
+                                <br />
+                                al vostro
+                                <br />
+                               ascolto!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left"> 
+                        All rights reserved. | Design: 
+                        <a  href=" http://templated.co/"> TEMPLATED </a>
+                        |  Project & image made by: 
+                        <a  href="https://www.instagram.com/federjcananni"> Federica Nanni </a>
+
+
+
+                    </div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/madamekifly"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/madamekifly"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-right">
+                        <a href="#!"></a>
+                        <a class="mr-3" href="indem.html">Documento</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Portfolio Modals-->
+        <!-- Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div id="BARRA">
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase"> Reiki </h2>
+                                    <p></p>
+                                    <p class="item-intro text-muted ciao"> Che cos'è? </p>
+                                
+                                    <class class="sapone">
+                                            <class class="list-inline">
+                                                <li> <b> Costo</b>: Offerta libera</li>
+                                                <li> <b> Durata</b>: 5-10 minuti veloce / 30-60 minuti completo </li>
+                                                <li><b>Modalità</b>: Presenza / Distanza (necessaria foto del viso)</li>
+                                            </class>
+                                            </br>
+                                            <p>Il reiki è una tecnica giapponese che permette in modo semplice e naturale di riportare in equilibrio l'energia vitale dell'individuo con l'energia dell'Universo. Il Reiki è un metodo di guaridigione e di benessere che agisce sul piano fisico,mentale emozionale e spirituale. Agisce sui blocchi energetici che determinano l'insorgere di un disagio psicologico o emozionale, aiuta la guarigione, purifica l'organismo da sostanze tossiche e riequilibra i centri energetici (chakra)</p> 
+                                            <p>Il riequilibrio dell'energia può avvenire a distanza o in presenza con l'utilizzo delle mani che vengono appoggiate sui diversi chackra o su parti del corpo. E' adatto per tutti: bambini, ragazzi, donne in gravidanza, anziani, animali, piante </p>
+                                            <ul class="list-inline">
+                                                <li>Tipi di trattamento</li>
+                                                <ul>
+                                                <li>Completo: Tutti i 7 chakra</li>
+                                                <li>Veloce: localizzato</li>
+                                                <li>Pulizia Aura: solo di persona </li>
+                                                <li>Protezione</li>
+                                                </ul>
+                                            </ul>           
+                                                <p></p>
+                                                <p></p>
+                                    </class>                       
+                                        <p class="verbo"><b>N.B</b> <u>  NON sostituisce la medicina tradizionale</u></p>
+                                                </class>
+                                                                        </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                
+                                        Chiudi la sezione                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div id="BARRA">
+   
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase wao"> Stimolazione Neurale </h2>
+                                    <p></p>
+                                    <p class="item-intro text-muted ciao"> Che cos'è? </p>
+                                    <class class="sapone">
+  
+                                            <ul class="list-inline">
+                                                <li> <b>Costo</b>: Offerta libera </li>
+                                                <li><b>Tempo</b>: 5 minuti veloce / 10 minuti equilibrio del sistema</li>
+                                                <li><b>Modalità</b>: Presenza / Distanza (necessaria foto del viso) </li>
+                                            </ul>
+                                            <p>Tecnica energetica similare al Reiki che agisce stimolando in presenza o a distanza alcuni centri vitali che sono posizionati sulla testa e lungo la spina dorsale. Ciascuno di questi punti è collegato a specifici organi e sistemi del nostro corpo attraverso il sistema nervoso (Chakra). E' veloce, naturale ed universalmente applicabile e agisce sui 3 pilastri fondamentali del corpo: Sistema immunitario, nervoso e sanguigno.
+                                                
+                                                Utilizza il campo elettromagnetico del corpo per accelerare l’attività dei neuroni e rigenera le cellule, promuovendo un equilibrio duraturo nella salute fisica, mentale ed emotiva. </p>
+                                            <ul class="list-inline">
+                                            <li> La stimolazione neurale permette di:
+                                            </li>
+                                            <ul> 
+                                                <li>Equilibrare il sistema nervoso</li>
+                                                <li> Controllare il dolore in generale</li>
+                                                <li>  Recuperare la qualità del sonno</li>
+                                                <li>  Rafforzare il sistema immunitario</li>
+                                                <li>   Regolare i valori del sangue </li>
+                                                <li> Controllare i livelli di stress, depressione e ansia </li>
+
+                                            </ul>
+                                          
+                                            </ul>      
+                                            
+                                            <ul class="list-inline">
+                                                <li>Tipi di trattamento</li>
+                                                <ul>
+                                                <li>Equilibrio del sistema nervoso: diviso in due parti, una volta a settimana</li>
+                                                <li> Trattamento veloce: 2 punti chakra, una volta al giorno </li>
+                                                 <li>Protezione</li>
+                                                 <li>Depurazione del sangue</li>
+                                            
+                                                </ul>
+                                            </ul>       
+                                            <p class="verbo"><b>N.B</b> <u>  NON sostituisce la medicina tradizionale</u></p>
+                                        </class>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Chiudi la sezione
+                                    </button>
+                                </div>
+                            </div>
+                     </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div id="BARRA">
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Segnature</h2>
+                                    <p></p>
+                                    <p class="item-intro text-muted ciao"> Che cosa sono?</p>
+                        <class class="sapone">
+                                    <ul class="list-inline">
+                                        <li> <b> Costo</b>: Offerta libera</li>
+                                        <li> <b> Durata</b>: 3 giorni</li>
+                                        <li><b>Modalità</b>: Presenza / Distanza (foto necessaria)</li>
+
+                                        
+                                    </ul>
+                                    <p> Le segnature sono un’arte di guarigione che prevede la recitazione di alcune formule e preghiere specifiche accompagnate da una gestualità simbolica e di solito dalla ripetizione del segno della croce (da qui il nome di segnature). </p>                  
+
+                                        <ul class="list-inline">
+                                            <li>Tipi di segnature</li>
+                                            <ul>
+                                            <li>Malocchio</li>
+                                            <li> Fuoco di Sant'Antonio </li>
+                                             <li> Dolori di svariata natura </li>
+                                             <li>Verruche</li>
+                                             <li>Bruciature</li>
+                                        
+                                            </ul>
+                                        </ul>    
+                                        <p class="verbo"><b>N.B</b> <u>  NON sostituisce la medicina tradizionale</u></p>
+                        </class>            
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Chiudi sezione
+                                    </button>
+                                </div>
+                            </div>
+                     </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                    <div id="BARRA">
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Lettura Sibille</h2>
+                                    <p></p>
+                                    <p class="item-intro text-muted ciao">Che cosa sono?</p>
+                                    <img class="img-fluid d-block mx-auto" src="" alt="" />
+                                    <class class="sapone">
+   
+                                                <ul class="list-inline">
+                                                <li> <b>Costo</b>: Offerta libera da concordare</li>
+                                                            <li> <b>Modalità</b>: Distanza / Presenza</li>
+                                                            <li> <b>Domande</b>: 2 al dì </li>
+                                            </ul>
+                                        
+                                            <p>Le Sibille, chiamate anche sibille chiacchierine o carte della conversazione, sono delle carte da divinazione che si distinguono dalle altre carte perché hanno una grafica intuitiva, colorata e ricca di significati. Aiutano a sciogliere qualsiasi incertezza, riuscendo ad analizzare in modo dettagliato diverse situazioni.
+                                            </p> <p>Situazioni possibili: economiche, amicizia, amore, lavoro, tradimenti, sentimenti, ecc. . . </p> 
+                                                
+                                            
+                                            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                                <i class="fas fa-times mr-1"></i>
+                                                Chiudi sezione
+                                            </button>
+                                    </class>
+                                </div>
+                            </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                     <div id="BARRA">
+   
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Lettura Tarocchi</h2>
+                                    <p></p>
+                                    <p class="item-intro text-muted ciao"> Che cosa sono? </p>
+                                    <img class="img-fluid d-block mx-auto" src="" alt="" />
+                                        <class class="sapone">
+                
+                                                            <ul class="list-inline">
+                                                            <li> <b>Costo</b>: Offerta libera da concordare</li>
+                                                            <li> <b>Modalità</b>: Distanza / Presenza</li>
+                                                            <li> <b>Domande</b>: 2 al dì </li>
+
+
+                                                         
+                                                        </ul>
+
+                                                            
+                                                    
+                                                        
+                                                            La lettura dei tarocchi, chiamata anche “cartomanzia” e “tarologia” è una pratica che diventa strumento di conoscenza. Ci aiutano ad avere un quadro del presente che stiamo vivendo, a comprendere il ruolo che si può avere in una certa situazione, certi lati della nostra personalità e dei nostri comportamenti in modo da riuscire ad affrontare al meglio la vita e ogni prova che ci troviamo davanti. 
+                                                            Ci permettono di comprendere meglio sè stessi, di aiutarci a capire se siamo sulla strada giusta o meno e cosa modificare per poter evolvere la nostra situazione.  </p>
+
+
+                                                        
+                                                        <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                                            <i class="fas fa-times mr-1"></i>
+                                                            Chiudi sezione
+                                                        </button>
+                                        </class>                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 6--> 
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                    <div id="BARRA">
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                            <!-- Project Details Go Here-->
+                                        
+                                            <h2 class="text-uppercase">Ching</h2>
+                                            <p></p>
+                                            <p class="item-intro text-muted ciao">Che cosa sono?</p>
+
+                                        <class class="sapone"> 
+                                            <ul class="list-inline">
+                                                <li> <b>Costo</b>: Offerta libera da concordare</li>
+                                                <li> <b>Modalità</b>: Distanza / Presenza</li>
+                                                <li> <b>Domande</b>: 2 al dì </li>
+
+
+                                            </ul>
+                                            <br>I ching sono l’oracolo più antico proveniente dalla civiltà cinese a cui è possibile rivolgere delle domande per ricevere delle indicazioni riguardo i comportamenti da tenere in tutte le situazione della vita: amore, lavoro e così via. La specialità sta nel suo linguaggio simbolico e nel fatto che non predice il futuro come pretendono di fare i tarocchi, la cartomanzia perché alla base dell’ I Ching vi è il mutamento. </br>Offrono uno strumento per comprendere al meglio cosa potrebbe capitare se la situazione continuasse ad essere sempre la stessa o cosa potrebbe accadere se la situazione si muovesse. </p>
+                                            
+                                           
+                                        </class>
+                                            <button class="btn btn-primary for" data-dismiss="modal" type="button">
+                                                <i class="fas fa-times mr-1"></i>
+                                                Chiudi sezione
+                                            </button>
+                                </div> 
+                            
+                            </div>
+                            </div>
+                        </div>
+                    </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+        <!-- Contact form JS-->
+        
+        
+        <!-- Core theme JS-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS . init () ;
+          </script>
+                  <script src="js/scripts.js"></script>
+
+                 
+                
+    </body>
 </html>
