@@ -11788,12 +11788,12 @@ section#contact form#contactForm :-ms-input-placeholder {
   overflow-x: hidden;
   height: 540px;
   width: auto;
-  margin: 1px;
-  padding: 2px;
+  margin: 0px;
+  padding: 1rem;
   scrollbar-base-color: #000000;
   scrollbar-arrow-color: #cccccc;
   scrollbar-track-color: #3c2d47;
-  padding-left:1rem;
+ 
   
 }
 
