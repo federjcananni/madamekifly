@@ -11793,6 +11793,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   scrollbar-base-color: #000000;
   scrollbar-arrow-color: #cccccc;
   scrollbar-track-color: #3c2d47;
+  padding-left:1rem;
   
 }
 
