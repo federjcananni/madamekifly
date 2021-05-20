@@ -11788,11 +11788,12 @@ section#contact form#contactForm :-ms-input-placeholder {
   overflow-x: hidden;
   height: 540px;
   width: auto;
-  margin: 0px;
+  margin: 1px;
   padding: 2px;
   scrollbar-base-color: #000000;
   scrollbar-arrow-color: #cccccc;
   scrollbar-track-color: #3c2d47;
+  
 }
 
 .verbo {
